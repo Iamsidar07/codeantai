@@ -5,7 +5,7 @@ import type { NextRequest } from "next/server";
 export function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname;
   if (pathname === "/dashboard" || pathname === "/") {
-    return NextResponse.redirect(new URL("/dashboard/repos", request.url));
+    return NextResponse.redirect(new URL("/dashboard/repos?username=iamsidar07", request.url));
   }
 }
 
