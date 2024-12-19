@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 import { SidebarItem, SidebarItemProps } from './SidebarItem'
 import { Logo } from '../Logo'
 import { ProjectSwitcher } from './ProjectSwitcher'
@@ -38,7 +38,9 @@ export const Sidebar = () => {
         {/* header */}
         <div className='px-5 flex flex-col gap-5'>
           <Logo />
-          <ProjectSwitcher />
+          <Suspense>
+            <ProjectSwitcher />
+          </Suspense>
         </div>
         <div className='px-4'>
           {
