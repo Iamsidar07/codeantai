@@ -5,7 +5,7 @@
 ## Features
 
 - **Sign-in Page (`/sign-in`)**: A dedicated page for user authentication.
-- **Home Page (`/`)**: The main application interface.
+- **Home Page (`/`)**: The main application interface.  *(Describe what the home page does - e.g., displays user information, allows interaction with AI, etc.)*
 - **Next.js**: Fast and optimized React-based framework.
 - **TypeScript**: Ensures type safety across the application.
 - **Tailwind CSS**: Utility-first CSS framework for rapid UI development.
@@ -16,8 +16,8 @@
 
 Before running the application, make sure you have the following installed:
 
-- **Node.js**: [Download Node.js](https://nodejs.org)
-- **npm**: Package manager
+- **Node.js (v16 or higher recommended)**: [Download Node.js](https://nodejs.org)
+- **npm (or yarn)**: Node Package Manager, usually included with Node.js.
 
 ---
 
@@ -32,13 +32,23 @@ git clone https://github.com/iamsidar07/codeantai.git
 cd codeantai
 ```
 
-### 2. Install Dependencies
+### 2. Create a `.env` file
+
+Copy the `.env.example` file to `.env`:
+
+```bash
+cp .env.example .env
+```
+
+**IMPORTANT:**  Fill in the necessary environment variables in the `.env` file.  *(Explain what environment variables are needed and what they do.  For example:  `NEXT_PUBLIC_API_URL`, `DATABASE_URL`, etc.)*
+
+### 3. Install Dependencies
 
 ```bash
 npm install
 ```
 
-### 3. Run the Development Server
+### 4. Run the Development Server
 
 ```bash
 npm run dev
