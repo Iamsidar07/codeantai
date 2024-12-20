@@ -39,8 +39,8 @@ export const RepositoryHeader: FC<Props> = ({ total }) => {
                     <p className='text-sm font-normal text-secondary'>{total} total repositories</p>
                 </div>
                 <div className='flex items-center gap-3'>
-                    <Button label='Refresh All' icon={<RefreshIcon />} />
-                    <Button label='Add Repository' icon={<PlusIcon />} variant='primary' />
+                    <Button label='Refresh All' icon={<RefreshIcon />} className="font-normal" />
+                    <Button label='Add Repository' icon={<PlusIcon />} variant='primary' className="font-normal" />
                 </div>
             </div>
             <div className={"relative"}>
