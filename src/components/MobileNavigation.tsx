@@ -2,7 +2,7 @@
 import React, { useState } from 'react'
 import { Logo } from './Logo'
 import { BarsIcon, CloseIcon } from '@/svgs'
-import ProjectSwitcher from './sidebar/ProjectSwitcher'
+import OrganizationSwitcher from './sidebar/OrganizationSwitcher'
 import { SidebarItem, SidebarItemProps } from './sidebar/SidebarItem'
 import { BookIcon, CloudIcon, CodeIcon, GearIcon, HomeIcon, PhoneIcon, SignOutIcon } from '@/svgs'
 
@@ -55,7 +55,7 @@ export const MobileNavigation = () => {
             </div>
             {/*Mobile Navigation*/}
             <div className={`absolute left-0 right-0 bg-white backdrop-blur-sm transition-all duration-300 ease-in-out overflow-hidden mx-auto lg:hidden p-4 ${isOpen ? "block" : "hidden"}`}>
-                <ProjectSwitcher />
+                <OrganizationSwitcher />
                 <ul className="mt-2">
                     {LINKS.map((link, i) => <SidebarItem key={i} {...link} />)}
                 </ul>

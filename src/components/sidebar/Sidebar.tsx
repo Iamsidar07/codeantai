@@ -1,7 +1,7 @@
 import React, { Suspense } from 'react'
 import { SidebarItem, SidebarItemProps } from './SidebarItem'
 import { Logo } from '../Logo'
-import { ProjectSwitcher } from './ProjectSwitcher'
+import { OrganizationSwitcher } from './OrganizationSwitcher'
 import { BookIcon, CloudIcon, CodeIcon, GearIcon, HomeIcon, PhoneIcon, SignOutIcon } from '@/svgs'
 
 export const LINKS: SidebarItemProps[] = [
@@ -39,7 +39,7 @@ export const Sidebar = () => {
         <div className='px-5 flex flex-col gap-5'>
           <Logo />
           <Suspense>
-            <ProjectSwitcher />
+            <OrganizationSwitcher />
           </Suspense>
         </div>
         <div className='px-4'>

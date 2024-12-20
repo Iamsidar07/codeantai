@@ -26,7 +26,6 @@ async function fetchRepos(username: string) {
   try {
     if (!username) return []
     const GITHUB_TOKEN = process.env.GITHUB_TOKEN
-    console.log(GITHUB_TOKEN)
     const res = await fetch(`https://api.github.com/users/${username}/repos?per_page=100`, {
       cache: 'force-cache',
       headers: {
