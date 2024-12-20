@@ -44,7 +44,7 @@ export const LINKS: SidebarItemProps[] = [
 export const MobileNavigation = () => {
     const [isOpen, setIsOpen] = useState(false)
     return (
-        <header className={`lg:hidden fixed top-0 bottom-0 inset-x-0 z-50 ${isOpen ? "bg-black/20" : ""}`}>
+        <header className={`fixed lg:hidden top-0 inset-x-0 z-50 ${isOpen ? "bg-black/20 bottom-0" : ""}`}>
             <div className="max-w-7xl mx-auto bg-white">
                 <div className={`flex items-center justify-between mx-auto p-4 ${isOpen ? "" : "border-b"}`}>
                     <Logo />
@@ -54,7 +54,7 @@ export const MobileNavigation = () => {
                 </div>
             </div>
             {/*Mobile Navigation*/}
-            <div className={`absolute left-0 right-0 bg-white backdrop-blur-sm transition-all duration-300 ease-in-out overflow-hidden z-20 mx-auto sm:hidden block p-4 ${isOpen ? "opacity-100" : "opacity-0"}`}>
+            <div className={`absolute left-0 right-0 bg-white backdrop-blur-sm transition-all duration-300 ease-in-out overflow-hidden mx-auto lg:hidden p-4 ${isOpen ? "block" : "hidden"}`}>
                 <ProjectSwitcher />
                 <ul className="mt-2">
                     {LINKS.map((link, i) => <SidebarItem key={i} {...link} />)}

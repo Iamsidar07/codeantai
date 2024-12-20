@@ -25,7 +25,9 @@ export const metadata = {
 async function fetchRepos(username: string) {
   try {
     if (!username) return []
-    const res = await fetch(`https://api.github.com/users/${username}/repos?per_page=100`)
+    const res = await fetch(`https://api.github.com/users/${username}/repos?per_page=100`, {
+      cache: 'force-cache'
+    })
     const data = await res.json()
     console.log("data", data)
     return data.map((repo: any) => ({
@@ -36,7 +38,7 @@ async function fetchRepos(username: string) {
       size: repo.size,
       language: repo.language,
       visibility: repo.visibility,
-      url: repo.url,
+      url: repo.html_url,
     })) as Repository[]
   } catch (error) {
     console.log(error)
