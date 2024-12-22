@@ -5,7 +5,7 @@
 ## Features
 
 - **Sign-in Page (`/sign-in`)**: A dedicated page for user authentication.
-- **Home Page (`/`)**: The main application interface.  *(Describe what the home page does - e.g., displays user information, allows interaction with AI, etc.)*
+- **Home Page (`/`)**: The main application interface. 
 - **Next.js**: Fast and optimized React-based framework.
 - **TypeScript**: Ensures type safety across the application.
 - **Tailwind CSS**: Utility-first CSS framework for rapid UI development.
